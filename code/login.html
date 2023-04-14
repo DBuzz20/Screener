@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="funzioni.js" type="application/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="stile.css" type="text/css"/> 
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <title>Login</title>
+</head>
+<body class="home text-center">
+    <a href="index.php" ><img src="./img/logo.PNG" class="logoLogin"></img></a>
+    <div class="container">
+    <form action="login.php" method="post" name="login">
+        <h1>Email:</h1>
+        <input type="email" name="email" placeholder="inserisci la mail" size="30" maxlength="30">
+        <br>
+        <h1>Password:</h1>
+        <input type="password" name="password" placeholder="inserisci la password"size="30" maxlength="30">
+        <br>
+        <br>
+        <input type="submit" name="login" value="accedi" class="btn btn-outline-warning btn-lg"> 
+        <input type="reset" value="reset" class="btn btn-outline-warning btn-lg">
+    </form>
+    <div>
+        </br>
+        <a class="btn btn-warning btn-lg" href="register.html"> Crea nuovo account</a>
+    </div>
+    </div>
+    </body>
+</html>

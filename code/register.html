@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="funzioni.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="stile.css" type="text/css"/> 
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+    <title>Registrazione</title>
+</head>
+<body class="home text-center">
+    <a href="index.php" ><img src="./img/logo.PNG" class="logoLogin"></img></a>
+    <div class="container">
+        <br>
+        <form action="registrazione.php" method="POST" name="registrazione">
+            <div class="mb-3">
+                <testoForm class="form-label">Nome:</testoForm>
+                <input class="form-control-sm" placeholder='inserisci il nome'type="text" name="nome" size="40" maxlength="40" pattern="[a-zA-Z]+" required>
+            </div>
+            <div class="mb-3">
+                <testoForm class="form-label">Cogome:</testoForm>
+                <input class="form-control-sm" placeholder='inserisci il cognome' type="text" name="cognome" size="40" maxlength="40" pattern="[a-zA-Z]+" required>
+            </div>
+            <div class="mb-3">
+                <testoForm class="form-label">Email:</testoForm>
+                <input class="form-control-sm" type="email" placeholder='inserisci una mail' name="email" size="40" maxlength="40" required>
+            </div>
+            <div class="mb-3">
+                <testoForm class="form-label">Password:</testoForm>
+                <input class="form-control-sm" type="password" name="password" placeholder='crea la tua Password' size="40" maxlength="40" required>
+            </div>
+            
+            <div class="mb-3">
+                <testoForm>Sono:</testoForm>
+                <select name="tipo" required>
+                    <option value="tipo1">investitore privato</option>
+                    <option valut="tipo2">investitore istituzionale</option>
+                    <option value="tipo3">altro</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="registrati" name="registration" class="btn btn-outline-warning btn-lg"> 
+                <input type="reset" value="reset" class="btn btn-outline-warning btn-lg">
+            </div>
+        </form>
+    
+        <div>
+            </br>
+            <testoForm>Ho già un account</testoForm>
+            <a class="btn btn-warning btn-sm" href="login.html">Login</a>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,167 @@
+html,body{
+    min-height:100%;
+}
+
+.home{
+    margin:0px;
+    background: url(img/sfondoHome.png) no-repeat center;
+    background-size: cover;
+    width:min(100%-2rem,600px);
+    margin-inline:auto;
+    justify-content: center;
+}
+
+.homeScreener{
+    margin:0px;
+    background: rgba(0, 0, 0, 0.958);
+    width:min(100%-2rem,600px);
+    margin-inline:auto;
+    justify-content: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.clickable{
+    cursor:pointer;
+}
+.clickable:hover{
+    color:#f8cb1a
+}
+
+a,U{
+    cursor:pointer;
+}
+
+h1{
+    text-align:center;
+    font-size:large;
+    color:white;
+}
+
+/* testo per le form login/registrati*/
+testoForm{
+    color:white;
+    font-size:large;
+}
+
+/*testo per i parametri dello screener*/
+testoScreener{
+    color:white;
+}
+
+.form-select{
+    min-width:190px;
+}
+
+.grid{
+    padding-top:100px;
+    margin-top: 100px;
+    display:grid;
+    grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.grid>a{
+    width: 60%;
+    height:50%;
+    margin-left: 20%;
+}
+
+.img1a{
+    margin-top:40%;
+    width: 40%;
+    height: 20%;
+    margin-left:95%;
+}
+.img1b{
+    margin-top:40%;
+    width: 40%;
+    height: 20%;
+    margin-left:-35%;
+}
+
+.img2a{
+    margin-top:75%;
+    width: 40%;
+    height: 20%;
+    margin-left:95%;
+}
+
+.img2b{
+    margin-top:75%;
+    width: 40%;
+    height: 20%;
+    margin-left:-41%;
+}
+
+.logo{
+    width:10%;
+    height: 10%;
+    padding: 0%;
+}
+
+.logoLogin{
+    width:10%;
+    height: 10%;
+    padding: 0%;
+    align-self: center;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+.modal-header {
+	background: #f8cb1a;
+	color: black;
+}
+
+.required:after {
+	content: "*";
+	color: red;
+}
+
+.hovertext{
+    position: relative;
+    border-bottom: 1px dotted black;
+}
+  
+.hovertext:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 200px;  
+    background-color: black;
+    color: rgb(222, 185, 2);
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 5px;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    left: -120px;
+    top: 110%;
+}
+  
+.hovertext:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.disattivato{
+    cursor:default;
+    opacity:0.4;
+}
+
+.walletgraphs{
+    margin-right: -10%;
+}
+
+canvas{
+    min-height: 100px;
+}

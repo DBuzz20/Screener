@@ -1,0 +1,51 @@
+file .txt con le tabelle che compongono il database dell'applicazione.
+
+CREATE TABLE IF NOT EXISTS public.portafogli
+(
+    email character varying(40) COLLATE pg_catalog."default" NOT NULL,
+    azione character varying(40) COLLATE pg_catalog."default" NOT NULL,
+    quantita numeric NOT NULL,
+    CONSTRAINT portafogli_pkey PRIMARY KEY (email, azione),
+    CONSTRAINT portafogli_email_fkey FOREIGN KEY (email)
+        REFERENCES public.utenti (email) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+    CONSTRAINT portafogli_azione_fkey FOREIGN KEY(azione)
+        REFERENCES public.azioni(nome) MATCH SIMPLE
+        ON DELETE NO ACTION
+)
+
+
+
+CREATE TABLE IF NOT EXISTS public.utenti
+(
+    email character varying(40) COLLATE pg_catalog."default" NOT NULL,
+    nome character varying(40) COLLATE pg_catalog."default" NOT NULL,
+    cognome character varying(40) COLLATE pg_catalog."default" NOT NULL,
+    pass character varying(40) COLLATE pg_catalog."default" NOT NULL,
+    investitore character varying(40) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT utente_pkey PRIMARY KEY (email)
+)
+
+
+
+CREATE TABLE IF NOT EXISTS public.azioni
+(
+    nome character varying(40) COLLATE pg_catalog."default" NOT NULL,
+    isin character varying(10) COLLATE pg_catalog."default" NOT NULL,
+    settore character varying(40) COLLATE pg_catalog."default" NOT NULL,
+    paese character varying(40) COLLATE pg_catalog."default" NOT NULL,
+    marketcap numeric NOT NULL,
+    prezzo numeric NOT NULL,
+    volume numeric NOT NULL,
+    pe numeric NOT NULL,
+    ps numeric NOT NULL,
+    pb numeric NOT NULL,
+    divyield numeric NOT NULL,
+    roe numeric NOT NULL,
+    roa numeric NOT NULL,
+    debteq numeric NOT NULL,
+    opmargin numeric NOT NULL,
+    ebitda numeric NOT NULL,
+    CONSTRAINT azioni_pkey PRIMARY KEY (isin)
+)
